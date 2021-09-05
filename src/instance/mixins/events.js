@@ -1,5 +1,5 @@
 export function eventsMixin(Vue) {
-    // 借机复习时间总线
+    // 借机复习 - 事件总线
     Vue.prototype.$on = function() {
 
     }
