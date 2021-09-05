@@ -8,12 +8,18 @@
 </head>
 <body>
     <script type="module">
-        import Vue from './src/instance/index.js' 
+        import Vue from './src/core/index.js' 
 
         let vueInstance = new Vue('kevin')
         vueInstance.$state = {stateTest: 1}
         vueInstance.$props = {propsTest: 1}
         console.log('%c [ vueInstance ]', 'font-size:13px; background:pink; color:#bf2c9f;', vueInstance)
+
+        let vueInstance2 = new Vue({
+            data: {
+                dataTest: 1
+            }
+        })
     </script>
 </body>
 </html>

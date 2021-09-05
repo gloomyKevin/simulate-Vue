@@ -1,4 +1,4 @@
-import ASSET_TYPES from '../shared/constants'
+import { ASSET_TYPES } from '../shared/constants.js'
 
 // 给Vue添加全局API
 // 全局API以静态属性和方法的形式被添加到Vue构造函数上
@@ -21,6 +21,8 @@ export function initGlobalAPI(Vue) {
     ASSET_TYPES.forEach(type => {
         Vue.options[type + 's'] = Object.create(null)
     })
+
+    console.log('%c [ Vue.options ]', 'font-size:13px; background:pink; color:#bf2c9f;', Vue.options)
 
     // 执行完后，Vue.options变成
     // Vue.options = {
