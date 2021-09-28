@@ -28,6 +28,7 @@ export function initMixin (Vue) {
             options || {},
             vm
         )
+        console.log('%c [ vm.$options ]', 'font-size:13px; background:pink; color:#bf2c9f;', vm.$options)
     }
 }
 

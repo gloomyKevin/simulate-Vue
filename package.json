@@ -1,0 +1,26 @@
+{
+  "name": "simulate-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloomyKevin/simulate-Vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gloomyKevin/simulate-Vue/issues"
+  },
+  "homepage": "https://github.com/gloomyKevin/simulate-Vue#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-jest": "^27.2.3",
+    "jest": "^27.2.3"
+  }
+}

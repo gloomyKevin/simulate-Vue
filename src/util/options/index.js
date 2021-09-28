@@ -8,6 +8,17 @@ export function mergeOptions (parent, child, vm) {
     if (typeof child === 'function') {
         child = child.options
     }
+
+    normalizeProps(child, vm)
+    // normalizeInject(child, vm)
+    // normalizeDirectives(child)
+
+    // 暂时忽略对 extends 和 mixin 的处理
+
+    const options = {}
+
+    // 策略模式的学习
+    return options
 }
 
 // 可以将数组形式的props规范为对象形式
@@ -36,14 +47,14 @@ function normalizeProps (options, vm) {
     // 模仿Vue官方写法
     const res = {}
     let u, val, name
-    if(Array.isArray(props)) {
+    if (Array.isArray(props)) {
         i = props.length
-        while(i--) {
+        while (i--) {
             val = props[i]
             if (typeof val === 'string') {
                 name = key
                 // name = camelize(val)
-                res[name] = {type: null}
+                res[name] = { type: null }
             }
         }
     } else if (isPlainObject(props)) {
@@ -52,10 +63,18 @@ function normalizeProps (options, vm) {
             name = key
             // name = camelize(key)
             res[name] = isPlainObject(val)
-            ? val
-            : {type: val}
+                ? val
+                : { type: val }
         }
     }
 
     options.props = objCache
+}
+
+function normalizeInject (options, vm) {
+
+}
+
+function normalizeDirectives (options) {
+
 }
